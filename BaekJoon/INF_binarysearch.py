@@ -15,4 +15,4 @@ def binarysearch(S,x):
 
 S = [1, 3, 10, 20, 33, 34, 39, 41, 49]
 
-print(binarysearch(S,2))
+print(binarysearch(S,3))
