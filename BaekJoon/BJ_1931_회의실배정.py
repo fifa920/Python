@@ -10,9 +10,9 @@ prev_time = sorted_list[0][1]
 for i in range(1, N):
     if sorted_list[i][1] == prev_time :
         continue
-    if sorted_list[i][0] >= prev_time :
-        prev_time = sorted_list[i][1]
-        cnt += 1
-
+    else :
+        if sorted_list[i][0] >= prev_time :
+            prev_time = sorted_list[i][1]
+            cnt += 1
 
 print(cnt)
