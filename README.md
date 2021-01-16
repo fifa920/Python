@@ -428,6 +428,10 @@ b = sorted(a, key=lambda x:x[0])
 
 # 첫 번째 인자를 기준으로 오름차순 정렬하고 그리고 그 안에서 다음 두 번째 인자를 내림차순 정렬
 c = sorted(a, key = lambda x : x[0], -x[1])
+
+# sort와 lambda를 이용해서도 이렇게 정렬 가능하다.
+a.sort(key=lambda x : (x[0], x[1]))
+>>> [(0, 1), (1, 2), (3, 0), (5, 1), (5, 2)]
 ```
 
 
@@ -546,7 +550,7 @@ print(dict(counter))
      ```
 
 
-  
+
 
   1. Queue 구현
 
