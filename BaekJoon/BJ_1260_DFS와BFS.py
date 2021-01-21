@@ -1,5 +1,8 @@
 from collections import deque
-V,E,start = map(int,input().split())
+import sys
+sys.stdin = open("BJ_1260_DFS와BFS.txt", "r")
+
+V,E,start = map(int, input().split())
 
 pan = [[0]*(V+1) for _ in range(V+1)]
 for _ in range(E):
@@ -33,3 +36,4 @@ def bfs(start):
 dfs(start)
 print()
 bfs(start)
+
