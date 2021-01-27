@@ -10,4 +10,8 @@ for t in range(1,T+1):
     result = [0]*N
 
     for i in range(M):
-        
+        for j in range(N):
+            if A[j] <= B[i]:
+                result[j] += 1
+                break
+    print("#{} {}".format(t,result.index(max(result))+1))
