@@ -5,6 +5,14 @@ N = int(input())
 
 pan = [list(map(int, input())) for _ in range(N)]
 
+# dy = [-1, 0, 1, 0]
+# dx = [0, 1, -1, 0]
+#
+# def bfs():
+#
+
+
+
 
 def solution(y,x):
     global apt_count
