@@ -59,11 +59,5 @@
 #     q.append(q.popleft())
 # print(q[0])
 
-dic1 = dict()
-dic2 = {}
-dic1[1] = 2
-dic1[2] = 3
-# dic1
-dic2 = {i : i*i for i in range(1,10)}
-print(dic2)
-print(dic2.get(2))
+x= '%.2f' %0.12873126
+print(type(x))
