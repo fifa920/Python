@@ -1,25 +1,47 @@
-import sys
-sys.stdin = open ("baekjoon_#15652_N과M(4).txt", "r")
+# import sys
+# sys.stdin = open ("baekjoon_#15652_N과M(4).txt", "r")
+#
+# N, M = map(int, input().split())
+# numbers = list(range(1,N+1))
+#
+# def track(depth, ans) :
+#     if depth == M :
+#         result = list(map(str, ans))
+#         print(' '.join(result))
+#         return
+#
+#     for number in numbers :
+#         if len(ans) == 0 :
+#             ans.append(number)
+#             track(depth+1, ans)
+#             ans.pop()
+#
+#         else :
+#             if number >= ans[-1] :
+#                 ans.append(number)
+#                 track(depth + 1, ans)
+#                 ans.pop()
+#
+# track(0, [])
 
-N, M = map(int, input().split())
-numbers = list(range(1,N+1))
+N,M = map(int, input().split())
 
-def track(depth, ans) :
-    if depth == M :
-        result = list(map(str, ans))
-        print(' '.join(result))
+numbers = [i for i in range(1,N+1)]
+
+def track(depth, ans):
+    if depth == M:
+        print(*ans)
         return
-
-    for number in numbers :
-        if len(ans) == 0 :
+    for number in numbers:
+        if len(ans) == 0:
             ans.append(number)
             track(depth+1, ans)
             ans.pop()
-
-        else :
-            if number >= ans[-1] :
+        else:
+            if number >= ans[-1]:
                 ans.append(number)
-                track(depth + 1, ans)
+                track(depth+1, ans)
                 ans.pop()
 
-track(0, [])
+
+track(0,[])
